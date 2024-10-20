@@ -3,7 +3,7 @@ from pandasql import sqldf
 from sqlalchemy import create_engine
 
 # Konfigurasi database
-db_uri = 'postgresql+psycopg2://postgres:12345@localhost:5432/de_mentor'
+db_uri = 'postgresql+psycopg2://postgres:12345@localhost:5432/test'
 #f'postgresql+psycopg2://{username}:{password}@{host}:{port}/{database}'
 
 # Buat engine SQLAlchemy
@@ -24,6 +24,6 @@ new_deaths > 5 ''')
 count_data = df_idn.shape[0]
 
 #load data after transformation to postgresql
-TABLE_NAME = 'test'
+TABLE_NAME = 'test1'
 df_idn.to_sql(name=TABLE_NAME, con=engine,index=False)
 print(f'Total Record has been inserted are {count_data} to table {TABLE_NAME} ')

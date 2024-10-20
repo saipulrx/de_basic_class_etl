@@ -163,3 +163,6 @@ cython_debug/
 
 # vscode
 .vscode
+
+# big size data
+fhvhv_tripdata_2024-07.parquet
